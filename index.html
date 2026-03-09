@@ -6,16 +6,16 @@
     <meta name="description" content="WDD 131 – Dynamic Web Fundamentals – Hyeyendele Rashidi – Home page project for course">
     <meta name="author" content="Hyeyendele Rashidi">
     <title>WDD 131 – Dynamic Web Fundamentals – Hyeyendele Rashidi</title>
-    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="style/base.css">
     <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
         <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
         <nav>
-            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" rel="noopener noreferrer">Scripture</a>
             <a href="#">Final Project</a>
         </nav>
     </header>
@@ -23,17 +23,19 @@
     <main>
         <h1>Hyeyendele Rashidi</h1>
 
-        <section class="card">
-            <h2>About Me</h2>
-            <img src="images/profile.jpg" alt="Profile Picture">
-            <p>This is a brief description about me and my learning journey in WDD 131.</p>
-        </section>
+        <div class="cards">
+            <section class="card">
+                <h2>About Me</h2>
+                <img src="images/profile.jpg" alt="Profile picture of Hyeyendele Rashidi" width="400" height="300" loading="lazy">
+                <p>This is a brief description about me and my learning journey in WDD 131.</p>
+            </section>
 
-        <section class="card">
-            <h2>Course Projects</h2>
-            <img src="images/project.jpg" alt="Project Image">
-            <p>Here are some examples of my course projects with HTML, CSS, and JavaScript.</p>
-        </section>
+            <section class="card">
+                <h2>Course Projects</h2>
+                <img src="images/project.jpg" alt="Screenshot of a course project" width="400" height="300" loading="lazy">
+                <p>Here are some examples of my course projects with HTML, CSS, and JavaScript.</p>
+            </section>
+        </div>
     </main>
 
     <footer>

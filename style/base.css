@@ -8,7 +8,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #222;
     background-color: #f4f4f4;
     max-width: 1200px;
     margin: auto;
@@ -18,8 +18,8 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #0066cc;
-    color: white;
+    background-color: #004a99;
+    color: #ffffff;
 }
 
 #course-title {
@@ -31,41 +31,62 @@ header {
 nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: white;
+    color: #ffffff;
     font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #ffe066;
 }
 
 /* Main */
 main {
     padding: 20px;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #004a99;
+}
+
+.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
 .card {
-    background: white;
+    background: #ffffff;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
     text-align: center;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    color: #004a99;
 }
 
 .card img {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #222;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 15px;
-    background-color: #333;
-    color: white;
+    background-color: #222;
+    color: #ffffff;
     margin-top: 20px;
 }
