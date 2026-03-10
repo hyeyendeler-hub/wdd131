@@ -9,7 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #222222;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     max-width: 1200px;
     margin: auto;
 }
@@ -18,38 +18,36 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #004a99;
-    color: #ffffff;
-    gap: 12px;
 }
 
-#course-title {
-    display: block;
-    font-size: 1.8em;
+.header-title {
+    background-color: #2a5f7f;
+    color: #ffffff;
+    text-align: center;
+    padding: 18px 20px;
+    font-size: 1.6em;
     font-weight: bold;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.5px;
 }
 
 nav {
+    background-color: #222222;
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 10px 20px;
 }
 
 nav a {
-    padding: 6px 12px;
     text-decoration: none;
     color: #ffffff;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-    transition: color 0.2s, border-bottom-color 0.2s;
+    font-size: 0.95em;
+    padding: 4px 8px;
+    transition: color 0.2s;
 }
 
 nav a:hover {
     color: #ffe066;
-    border-bottom-color: #ffe066;
 }
 
 /* Main */
@@ -60,44 +58,123 @@ main {
 main h1 {
     text-align: center;
     margin-bottom: 24px;
-    font-size: 2em;
-    color: #004a99;
+    font-size: 2.2em;
+    color: #111111;
+    font-family: 'Georgia', serif;
 }
 
-.cards {
+/* Two-column layout */
+.layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
 }
 
+/* Cards */
 .card {
-    background: #ffffff;
-    padding: 20px;
+    border: 1px solid #cccccc;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #2a5f7f;
+    color: #ffffff;
     text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* About Me top section: text + photo */
+.about-top {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
 }
 
-.card h2 {
-    color: #004a99;
-    font-size: 1.3em;
+.about-top p {
+    flex: 1;
+    font-size: 0.95em;
+    line-height: 1.7;
 }
 
-.card img {
-    width: 100%;
+.about-top img {
+    width: 160px;
     height: auto;
-    border-radius: 6px;
+    flex-shrink: 0;
     display: block;
 }
 
-.card p {
-    color: #333333;
+/* Country Section */
+.country-section h3 {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    padding: 8px 0;
+    margin-bottom: 16px;
+}
+
+.country-details {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.country-details figure {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.country-details figure img {
+    width: 160px;
+    height: auto;
+    border: 1px solid #cccccc;
+    display: block;
+}
+
+.country-details figcaption {
+    font-style: italic;
+    font-size: 0.85em;
+    margin-top: 6px;
+    color: #444444;
+}
+
+.country-details p {
     font-size: 0.95em;
-    line-height: 1.6;
+    line-height: 1.7;
+}
+
+/* Resources Card */
+.resources-card .card-body {
+    padding: 30px 20px;
+}
+
+.resources-card ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.resources-card ul li {
+    margin-bottom: 10px;
+}
+
+.resources-card ul li a {
+    color: #1a0dab;
+    text-decoration: underline;
+    font-size: 0.95em;
+}
+
+.resources-card ul li a:hover {
+    color: #004a99;
 }
 
 /* Footer */
@@ -109,4 +186,23 @@ footer {
     margin-top: 30px;
     font-size: 0.9em;
     line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+    .about-top {
+        flex-direction: column;
+    }
+    .about-top img {
+        width: 100%;
+    }
+    .country-details {
+        flex-direction: column;
+    }
+    .country-details figure img {
+        width: 100%;
+    }
 }

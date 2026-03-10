@@ -12,10 +12,10 @@
 </head>
 <body>
     <header>
-        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <div class="header-title">WDD 131: Dynamic Web Fundamentals</div>
         <nav>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a>
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">I-Learn</a>
             <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" rel="noopener noreferrer">Scripture</a>
             <a href="#">Final Project</a>
         </nav>
@@ -24,23 +24,41 @@
     <main>
         <h1>Hyeyendele Rashidi</h1>
 
-        <div class="cards">
-            <section class="card">
-                <h2>About Me</h2>
-                <img src="images/profile.jpg" alt="Profile picture of Hyeyendele Rashidi" width="400" height="300" loading="lazy">
-                <p>Hello! I am Hyeyendele Rashidi from Uganda. I am enrolled in WDD 131 – Dynamic Web Fundamentals at BYU-Pathway Worldwide, where I am learning to build dynamic web pages using HTML, CSS, and JavaScript.</p>
+        <div class="layout">
+            <!-- About Me Card -->
+            <section class="card about-card">
+                <div class="card-header">About Me</div>
+                <div class="card-body">
+                    <div class="about-top">
+                        <p>Hello! I am Hyeyendele Rashidi from Uganda. I am enrolled in WDD 131 – Dynamic Web Fundamentals at BYU-Pathway Worldwide, where I am learning to build dynamic web pages using HTML, CSS, and JavaScript. I love serving my community and helping others grow through technology.</p>
+                        <img src="images/profile.jpg" alt="Profile picture of Hyeyendele Rashidi" loading="lazy">
+                    </div>
+                    <div class="country-section">
+                        <h3>Kampala, Uganda</h3>
+                        <div class="country-details">
+                            <figure>
+                                <img src="images/Ugandan_Flag.jpg" alt="Official Flag of Uganda" loading="lazy">
+                                <figcaption>Official Flag of<br>Uganda</figcaption>
+                            </figure>
+                            <p>Uganda, known as the Pearl of Africa, is a landlocked country in East Africa. It is home to nearly half of the world's mountain gorilla population and borders Lake Victoria, the largest lake in Africa. Uganda is known for its extraordinary variety of animals and plants, rich culture, and warm people.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section class="card">
-                <h2>My Country</h2>
-                <img src="images/Ugandan_Flag.jpg" alt="Ugandan flag representing my home country" width="400" height="300" loading="lazy">
-                <p>I am proud to be from Uganda – the Pearl of Africa. My goal is to use the skills gained in this course to serve my community through technology.</p>
-            </section>
-
-            <section class="card">
-                <h2>Course Projects</h2>
-                <img src="images/1000004489.jpg" alt="Screenshot of a web development course project" width="400" height="300" loading="lazy">
-                <p>Throughout WDD 131, I will build and showcase projects that demonstrate my growing proficiency in HTML, CSS, and JavaScript web development.</p>
+            <!-- Web Dev Resources Card -->
+            <section class="card resources-card">
+                <div class="card-header">Web Dev Resources</div>
+                <div class="card-body">
+                    <ul>
+                        <li><a href="https://dev.to" target="_blank" rel="noopener noreferrer">Dev.to Community</a></li>
+                        <li><a href="https://www.smashingmagazine.com" target="_blank" rel="noopener noreferrer">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com" target="_blank" rel="noopener noreferrer">CSS Tricks</a></li>
+                        <li><a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3 Schools</a></li>
+                        <li><a href="https://www.udemy.com" target="_blank" rel="noopener noreferrer">Udemy</a></li>
+                        <li><a href="https://picsum.photos" target="_blank" rel="noopener noreferrer">Lorem Picsum Image Placeholder</a></li>
+                    </ul>
+                </div>
             </section>
         </div>
     </main>
