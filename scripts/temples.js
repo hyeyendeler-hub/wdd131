@@ -9,6 +9,12 @@ const temples = [
     { name: "Red Cliffs Temple", location: "St. George, UT", dedicated: 2023, sqft: 40000, src: "images/red_cliffs_temple.jpeg" },
     { name: "Public Gets Temple", location: "Provo, UT", dedicated: 2020, sqft: 90000, src: "images/public_gets_temple.jpeg" },
     { name: "Provo Utah Temple", location: "Provo, UT", dedicated: 1972, sqft: 128325, src: "images/provo_utah_temple.jpeg" },
+    { name: "Abidjan Ivory Coast Temple", location: "Abidjan, Ivory Coast", dedicated: 2011, sqft: 10700, src: "images/abidjan_ivory_coast_temple.jpeg" },
+    { name: "American Temple", location: "United States", dedicated: 2000, sqft: 50000, src: "images/american_temple.jpeg" },
+    { name: "Beauty and Purpose Temple", location: "United States", dedicated: 2010, sqft: 45000, src: "images/beauty_purpose_temple.jpeg" },
+    { name: "Grand Junction Temple", location: "Grand Junction, CO", dedicated: 2023, sqft: 10000, src: "images/grand_junction_temple.jpeg" },
+    { name: "Kansas City Temple", location: "Kansas City, MO", dedicated: 2012, sqft: 33800, src: "images/kansas_city_temple.jpeg" },
+    { name: "LDS Temple", location: "United States", dedicated: 1980, sqft: 80000, src: "images/lds_temple.jpeg" },
 ];
 
 function buildGallery(filter) {
