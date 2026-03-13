@@ -45,6 +45,12 @@ header {
     cursor: pointer;
     line-height: 1;
     padding: 0 4px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+#hamburger:hover {
+    color: #e0b3ff;
+    transform: scale(1.15);
 }
 
 /* ===== DESKTOP NAV ===== */
@@ -62,12 +68,43 @@ header {
     font-size: 1em;
     padding: 6px 16px;
     border-radius: 4px;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+    display: inline-block;
 }
 
 #main-nav a:hover,
 #main-nav a.active {
     background-color: rgba(255, 255, 255, 0.2);
+    color: #ffe066;
+    transform: scale(1.07);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+/* ===== FILTER BUTTONS ===== */
+.filter-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    padding: 5px 14px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.25s, color 0.25s, border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+}
+
+.filter-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ffe066;
+    color: #ffe066;
+    transform: scale(1.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.filter-btn:active {
+    transform: scale(0.97);
+    box-shadow: none;
 }
 
 /* ===== MAIN ===== */
