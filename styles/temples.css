@@ -1,3 +1,24 @@
+/* ===== COLOR PALETTE (CSS Custom Properties) ===== */
+:root {
+    --color-primary:        #5c1a9e;   /* header / footer / figcaption */
+    --color-primary-dark:   #4a1480;   /* mobile nav background */
+    --color-primary-deeper: #3a0d6e;   /* h1 text */
+    --color-accent:         #ffe066;   /* hover / active highlight */
+    --color-white:          #ffffff;
+    --color-text:           #222222;
+    --color-bg:             #ffffff;
+    --color-nav-hover-bg:   rgba(255, 255, 255, 0.2);
+    --color-nav-border:     rgba(255, 255, 255, 0.15);
+    --color-btn-border:     rgba(255, 255, 255, 0.5);
+    --color-shadow-dark:    rgba(0, 0, 0, 0.25);
+    --color-shadow-darker:  rgba(0, 0, 0, 0.3);
+    --color-bg-large:       #f5f0fb;   /* large-screen body background */
+    --color-card-bg:        #ffffff;   /* figure card background (large) */
+    --color-shadow-primary: rgba(92, 26, 158, 0.10);
+    --color-shadow-primary-hover: rgba(92, 26, 158, 0.20);
+    --color-nav-hover-bg-lg: rgba(255, 255, 255, 0.25);
+}
+
 /* General Reset */
 * {
     margin: 0;
@@ -8,15 +29,15 @@
 body {
     font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
-    color: #222222;
-    background-color: #ffffff;
+    color: var(--color-text);
+    background-color: var(--color-bg);
     max-width: 1200px;
     margin: 0 auto;
 }
 
 /* ===== HEADER ===== */
 header {
-    background-color: #5c1a9e;
+    background-color: var(--color-primary);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -30,7 +51,7 @@ header {
 }
 
 .site-title {
-    color: #ffffff;
+    color: var(--color-white);
     font-size: 1.5em;
     font-weight: 700;
 }
@@ -40,7 +61,7 @@ header {
     display: block;
     background: none;
     border: none;
-    color: #ffffff;
+    color: var(--color-white);
     font-size: 1.8em;
     cursor: pointer;
     line-height: 1;
@@ -49,7 +70,7 @@ header {
 }
 
 #hamburger:hover {
-    color: #e0b3ff;
+    color: var(--color-accent);
     transform: scale(1.15);
 }
 
@@ -59,7 +80,7 @@ header {
     flex-direction: column;
     align-items: stretch;
     padding: 0;
-    background-color: #4a1480;
+    background-color: var(--color-primary-dark);
 }
 
 #main-nav.open {
@@ -68,29 +89,29 @@ header {
 
 /* Consolidated nav link styles */
 #main-nav a {
-    color: #ffffff;
+    color: var(--color-white);
     text-decoration: none;
     font-size: 1em;
     padding: 14px 20px;
     border-radius: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid var(--color-nav-border);
     transition: background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
     display: inline-block;
 }
 
 #main-nav a:hover,
 #main-nav a.active {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #ffe066;
+    background-color: var(--color-nav-hover-bg);
+    color: var(--color-accent);
     transform: scale(1.07);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 8px var(--color-shadow-dark);
 }
 
 /* ===== FILTER BUTTONS ===== */
 .filter-btn {
     background-color: transparent;
-    color: #ffffff;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: var(--color-white);
+    border: 2px solid var(--color-btn-border);
     border-radius: 4px;
     padding: 5px 14px;
     font-size: 1em;
@@ -101,11 +122,11 @@ header {
 }
 
 .filter-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: #ffe066;
-    color: #ffe066;
+    background-color: var(--color-nav-hover-bg);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
     transform: scale(1.08);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px var(--color-shadow-darker);
 }
 
 .filter-btn:active {
@@ -121,7 +142,7 @@ main {
 h1 {
     text-align: center;
     font-size: 1.8em;
-    color: #3a0d6e;
+    color: var(--color-primary-deeper);
     margin-bottom: 24px;
     font-weight: 700;
 }
@@ -150,7 +171,7 @@ figure img {
 figcaption {
     margin-top: 6px;
     font-size: 0.85em;
-    color: #5c1a9e;
+    color: var(--color-primary);
     text-align: center;
     font-style: italic;
 }
@@ -159,8 +180,8 @@ figcaption {
 footer {
     text-align: center;
     padding: 14px 16px;
-    background-color: #5c1a9e;
-    color: #ffffff;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     margin-top: 40px;
     font-size: 0.88em;
     line-height: 1.8;
