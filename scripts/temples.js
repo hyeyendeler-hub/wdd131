@@ -34,9 +34,9 @@ function buildGallery(filter) {
         filtered = temples;
     }
 
-    gallery.innerHTML = filtered.map(t => `
+    gallery.innerHTML = filtered.map((t, i) => `
         <figure>
-            <img src="${t.src}" alt="${t.name}" loading="lazy" width="400" height="300">
+            <img src="${t.src}" alt="${t.name}"${i === 0 ? ' fetchpriority="high"' : ' loading="lazy"'} width="400" height="300">
             <figcaption>${t.name}</figcaption>
         </figure>
     `).join('');
