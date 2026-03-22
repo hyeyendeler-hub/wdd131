@@ -94,21 +94,16 @@ nav a:focus {
 .hero {
   position: relative;
   overflow: hidden;
-  max-height: 460px;
-}
-
-.hero img {
-  width: 100%;
   height: 320px;
-  object-fit: cover;
-  object-position: center;
+  background-image: url('../images/stock-photo-group-of-cotton-plants-with-uganda-flag-illustration-poster-design-cotton-trade-concept-2346307419.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
 }
 
 .hero-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   background: linear-gradient(transparent, rgba(0,0,0,0.65));
   color: #ffffff;
   padding: 1.5rem 1rem 1rem;
