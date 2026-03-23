@@ -1,0 +1,193 @@
+/* ============================================================
+   place-large.css  –  Large-screen overrides for Uganda Place page
+   ============================================================ */
+
+/* ===== TABLET / SMALL DESKTOP (769px+) ===== */
+@media (min-width: 769px) {
+    body {
+        line-height: 1.7;
+        background-color: var(--color-bg-light);
+        max-width: 1400px;
+    }
+
+    /* Header becomes a full flex row */
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+    }
+
+    .header-bar {
+        padding: 16px 0;
+        flex: 0 0 auto;
+    }
+
+    .site-title {
+        font-size: 1.8em;
+        letter-spacing: 0.04em;
+    }
+
+    /* Hamburger not needed on larger screens */
+    #hamburger {
+        display: none !important;
+    }
+
+    /* Navigation becomes a horizontal row */
+    #main-nav {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+        background-color: transparent;
+        padding: 0;
+        flex: 1 1 auto;
+    }
+
+    #main-nav a {
+        font-size: 1.05em;
+        font-weight: 500;
+        padding: 8px 20px;
+        border-radius: 6px;
+        border-bottom: none;
+        white-space: nowrap;
+    }
+
+    #main-nav a:hover,
+    #main-nav a.active {
+        background-color: var(--color-nav-hover);
+        color: var(--color-secondary);
+    }
+
+    /* Hero section - larger for desktop */
+    .hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .hero-overlay {
+        padding: 60px 40px 40px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 3em;
+    }
+
+    .hero-overlay p {
+        font-size: 1.4em;
+    }
+
+    /* Content sections */
+    .content-section {
+        padding: 48px 40px;
+    }
+
+    h2 {
+        font-size: 2.2em;
+        margin-bottom: 32px;
+    }
+
+    h2::after {
+        width: 80px;
+        height: 4px;
+    }
+
+    /* About content */
+    .about-content {
+        font-size: 1.1em;
+    }
+
+    /* Attractions - 4 columns on larger screens */
+    .attractions-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+
+    .attraction-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .attraction-card img {
+        height: 180px;
+    }
+
+    /* Weather section - horizontal layout */
+    .weather-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 700px;
+        gap: 40px;
+    }
+
+    .weather-icon-container {
+        flex: 0 0 auto;
+    }
+
+    .weather-details {
+        text-align: left;
+    }
+
+    .weather-location {
+        font-size: 1.6em;
+    }
+
+    /* Hide SVG in wider view - use emoticon instead */
+    .weather-icon-svg {
+        display: none;
+    }
+
+    .weather-condition::after {
+        content: ' ⛅';
+    }
+
+    /* Footer */
+    footer {
+        padding: 24px 40px;
+        font-size: 1em;
+    }
+}
+
+/* ===== DESKTOP (1024px+) ===== */
+@media (min-width: 1024px) {
+    body {
+        font-size: 1.05rem;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .hero-overlay h1 {
+        font-size: 3.5em;
+    }
+
+    .content-section {
+        padding: 56px 48px;
+    }
+
+    h2 {
+        font-size: 2.4em;
+    }
+
+    .attractions-grid {
+        gap: 28px;
+    }
+}
+
+/* ===== EXTRA WIDE (1400px+) ===== */
+@media (min-width: 1400px) {
+    .attractions-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 4em;
+    }
+
+    .content-section {
+        padding: 64px 56px;
+    }
+}

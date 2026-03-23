@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uganda - The Pearl of Africa. Discover the beauty, culture, and attractions of Uganda – Hyeyendele Rashidi – WDD 131">
+    <meta name="author" content="Hyeyendele Rashidi">
+    <title>Uganda - The Pearl of Africa – WDD 131</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%F0%9F%8C%8D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <style>
+        /* Pseudo-element for weather emoticon in wider view */
+        @media (min-width: 769px) {
+            .weather-location::after {
+                content: ' ⛅';
+            }
+        }
+    </style>
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-bar">
+            <span class="site-title">Uganda</span>
+            <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+                &#9776;
+            </button>
+        </div>
+        <nav id="main-nav" aria-label="Site navigation">
+            <a href="place.html" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#attractions">Attractions</a>
+            <a href="#weather">Weather</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section with responsive images -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/uganda-hero-small.webp" media="(max-width: 500px)">
+                <source srcset="images/uganda-hero-medium.webp" media="(max-width: 1024px)">
+                <img src="images/uganda-hero-large.webp" alt="Uganda landscape with rolling hills and greenery" fetchpriority="high" width="1200" height="600">
+            </picture>
+            <div class="hero-overlay">
+                <h1>The Pearl of Africa</h1>
+                <p>Discover the Magic of Uganda</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <h2>About Uganda</h2>
+            <div class="about-content">
+                <p>Uganda is a landlocked country in East Africa. Known as the "Pearl of Africa," it is renowned for its lush landscapes, diverse wildlife, and vibrant culture. Uganda is home to the source of the Nile River, mountain gorillas in Bwindi Impenetrable National Park, and the famous Rwenzori Mountains.</p>
+                <p>The country boasts 10 national parks and numerous wildlife reserves, making it a premier destination for safari adventures and nature enthusiasts.</p>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section id="attractions" class="content-section">
+            <h2>Top Attractions</h2>
+            <div class="attractions-grid">
+                <article class="attraction-card">
+                    <img src="images/murchison_falls.webp" alt="Murchison Falls" loading="lazy" width="400" height="300">
+                    <h3>Murchison Falls</h3>
+                    <p>Witness the mighty Nile forced through a narrow gorge creating one of Africa's most powerful waterfalls.</p>
+                </article>
+                <article class="attraction-card">
+                    <img src="images/gorillas.webp" alt="Mountain Gorillas" loading="lazy" width="400" height="300">
+                    <h3>Mountain Gorillas</h3>
+                    <p>Come face-to-face with endangered mountain gorillas in Bwindi Impenetrable Forest.</p>
+                </article>
+                <article class="attraction-card">
+                    <img src="images/source_nile.webp" alt="Source of the Nile" loading="lazy" width="400" height="300">
+                    <h3>Source of the Nile</h3>
+                    <p>Visit the legendary source of the Nile River in Jinja, a historic and scenic location.</p>
+                </article>
+                <article class="attraction-card">
+                    <img src="images/queen_elizabeth.webp" alt="Queen Elizabeth National Park" loading="lazy" width="400" height="300">
+                    <h3>Queen Elizabeth National Park</h3>
+                    <p>Explore this diverse park famous for its tree-climbing lions and hippos.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section id="weather" class="content-section weather-section">
+            <h2>Weather</h2>
+            <div class="weather-content">
+                <div class="weather-icon-container">
+                    <!-- SVG for mobile view -->
+                    <svg class="weather-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+                        <circle cx="32" cy="32" r="12" fill="#FCDC04"/>
+                        <path d="M32 8 L32 16 M12 32 L8 32 M52 32 L56 32 M15.03 15.03 L11.52 11.52 M52.48 52.48 L56 56 M15.03 48.97 L11.52 52.48 M52.48 11.52 L56 8" stroke="#FCDC04" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="weather-details">
+                    <p class="weather-location">Kampala, Uganda</p>
+                    <p class="weather-condition">Partly Cloudy ⛅</p>
+                    <p class="weather-temp">Temperature: 28°C</p>
+                    <p class="weather-wind">Wind Speed: 12 km/h</p>
+                    <p class="weather-chill">Wind Chill: <span id="windchill-result">--</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🦁 Hyeyendele Rashidi 🦁 Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
