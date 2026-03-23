@@ -133,6 +133,10 @@
         font-size: 1.6em;
     }
 
+    .weather-location::after {
+        content: ' ⛅';
+    }
+
     /* Hide SVG in wider view - use emoticon instead */
     .weather-icon-svg {
         display: none;
