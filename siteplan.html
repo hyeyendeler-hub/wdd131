@@ -3,183 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive planning document for Uganda Tourism website - The Pearl of Africa. Includes site purpose, color scheme, typography, and wireframes.">
+    <meta name="author" content="hyeyendele rashidi">
     <title>Website Planning Document - Uganda Tourism</title>
-    <style>
-        /* Color Scheme: Primary - #2E5A88 (Deep Blue), Secondary - #F4A460 (Sandy Brown), Accent - #228B22 (Forest Green) */
-        :root {
-            --primary-color: #2E5A88;
-            --secondary-color: #F4A460;
-            --accent-color: #228B22;
-            --text-color: #333333;
-            --background-color: #FFFFFF;
-            --light-bg: #F5F5F5;
-        }
-
-        /* Typography: Open Sans for body, Montserrat for headings */
-        body {
-            font-family: 'Open Sans', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            margin: 0;
-            padding: 0;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
-            color: var(--primary-color);
-            margin-top: 1.5em;
-            margin-bottom: 0.5em;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: var(--background-color);
-            padding: 2rem;
-            text-align: center;
-        }
-
-        header h1 {
-            color: var(--background-color);
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        header p {
-            margin: 0.5rem 0 0 0;
-            font-size: 1.1rem;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        section {
-            background-color: var(--light-bg);
-            border-left: 4px solid var(--accent-color);
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border-radius: 0 8px 8px 0;
-        }
-
-        h2 {
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
-        }
-
-        .color-swatch {
-            display: inline-block;
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            text-align: center;
-            line-height: 100px;
-            color: white;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        .wireframe {
-            background-color: var(--background-color);
-            border: 2px solid var(--primary-color);
-            border-radius: 8px;
-            padding: 1rem;
-            margin: 1rem 0;
-        }
-
-        .wireframe-box {
-            background-color: var(--secondary-color);
-            border: 1px dashed var(--primary-color);
-            padding: 0.5rem;
-            margin: 0.5rem 0;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        .wireframe-nav {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .wireframe-hero {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .wireframe-content {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .wireframe-content .wireframe-box {
-            flex: 1;
-        }
-
-        .wireframe-footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.5rem;
-            margin-top: 0.5rem;
-        }
-
-        ul {
-            padding-left: 1.5rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .scenario {
-            background-color: var(--background-color);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            border-left: 3px solid var(--secondary-color);
-        }
-
-        .scenario strong {
-            color: var(--primary-color);
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: var(--background-color);
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            main {
-                padding: 1rem;
-            }
-
-            .wireframe-content {
-                flex-direction: column;
-            }
-
-            .color-swatch {
-                width: 80px;
-                height: 80px;
-                line-height: 80px;
-                font-size: 0.8rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles/siteplan.css">
 </head>
 <body>
     <header>
@@ -224,10 +51,10 @@
             <h2>4. Color Scheme</h2>
             <p>The following colors have been selected to reflect Uganda's natural beauty and national identity:</p>
             
-            <div style="text-align: center; margin: 2rem 0;">
-                <div class="color-swatch" style="background-color: #2E5A88;">#2E5A88<br>Primary</div>
-                <div class="color-swatch" style="background-color: #F4A460;">#F4A460<br>Secondary</div>
-                <div class="color-swatch" style="background-color: #228B22;">#228B22<br>Accent</div>
+            <div class="color-swatches-container">
+                <div class="color-swatch color-swatch-primary">#2E5A88<br>Primary</div>
+                <div class="color-swatch color-swatch-secondary">#F4A460<br>Secondary</div>
+                <div class="color-swatch color-swatch-accent">#228B22<br>Accent</div>
             </div>
 
             <h3>Color Usage:</h3>
