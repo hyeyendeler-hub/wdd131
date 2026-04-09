@@ -31,4 +31,26 @@ document.addEventListener('DOMContentLoaded', function() {
         const today = new Date().toISOString().split('T')[0];
         dateInput.value = today;
     }
+
+    // Handle form submission - save to localStorage before redirect
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function() {
+            const formData = {
+                productName: document.getElementById('product-name').value,
+                rating: document.querySelector('input[name="rating"]:checked')?.value,
+                installationDate: document.getElementById('installation-date').value,
+                usefulFeatures: Array.from(document.querySelectorAll('input[name="useful-features"]:checked')).map(cb => cb.value),
+                review: document.getElementById('review').value,
+                userName: document.getElementById('user-name').value,
+                timestamp: new Date().toISOString()
+            };
+            localStorage.setItem('pendingReview', JSON.stringify(formData));
+            
+            // Get current review count and increment
+            let reviewCount = localStorage.getItem('reviewCount');
+            reviewCount = reviewCount ? parseInt(reviewCount) + 1 : 1;
+            localStorage.setItem('reviewCount', reviewCount);
+        });
+    }
 });

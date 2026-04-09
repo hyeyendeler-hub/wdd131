@@ -1,0 +1,15 @@
+Inheritance in object oriented programming is a concept where a new class is created based on an existing class. The new class (child class) automatically gains the attributes and behaviors of the existing class (parent class), while also having the ability to add new features or modify existing ones. This helps structure programs in a logical and hierarchical way.
+A key advantage of inheritance is that it improves code reusability and efficiency. Developers can build upon existing code instead of starting from scratch, which reduces errors and makes the program easier to update and expand.
+For instance, consider a Vehicle class that has a method like startEngine(). A Car class can inherit from Vehicle and include additional methods such as playMusic().
+
+class Vehicle {
+  startEngine() {
+    console.log("Engine started.");
+  }
+}
+
+class Car extends Vehicle {
+  playMusic() {
+    console.log("Playing music in the car.");
+  }
+}
