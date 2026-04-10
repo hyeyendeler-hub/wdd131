@@ -46,11 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 timestamp: new Date().toISOString()
             };
             localStorage.setItem('pendingReview', JSON.stringify(formData));
-            
-            // Get current review count and increment
-            let reviewCount = localStorage.getItem('reviewCount');
-            reviewCount = reviewCount ? parseInt(reviewCount) + 1 : 1;
-            localStorage.setItem('reviewCount', reviewCount);
+            localStorage.setItem('pendingReviewProcessed', 'false');
         });
     }
 });
